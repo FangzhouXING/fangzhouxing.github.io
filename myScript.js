@@ -347,7 +347,7 @@ function processInput(key) {
                 curShape = getNextShape(curShape);
                 redrawCanvas();
             }
-            
+            tick();
         break;
 
         case "a":
