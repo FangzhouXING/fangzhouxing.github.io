@@ -9,9 +9,6 @@ var needNewPiece; // do we need to generate a new piece
 var curShape;
 
 function main() {
-    var s = document.getElementById("sidebar");
-    s.innerHTML = "changed";
-
     initCanvas();
 
     //drawBoard();
@@ -137,7 +134,7 @@ function validateBoardAndShape(Board_state, Shape, y, x) {
 function initCanvas() {
     var c = document.getElementById("RightCanvas");
     var ctx=c.getContext("2d");
-    ctx.fillStyle = "#FF0000";
+    ctx.fillStyle = "#4F5F6F";
     Canvas = ctx;
 }
 
@@ -338,6 +335,7 @@ function processInput(key) {
         case "s":
         case "S":
             Y = findLowestLocation(Board_state, curShape, Y, X);
+            redrawCanvas();
             tick();
         break;
 
@@ -347,7 +345,6 @@ function processInput(key) {
                 curShape = getNextShape(curShape);
                 redrawCanvas();
             }
-            tick();
         break;
 
         case "a":
