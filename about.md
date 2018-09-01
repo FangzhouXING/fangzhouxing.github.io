@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
+title: About Me
 permalink: /about/
 ---
 
-My About Page.
+I have some experience in typing keyboard. Some of the stuff I type happen to be software. 
