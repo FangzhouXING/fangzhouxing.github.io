@@ -8,7 +8,11 @@ var Y; //current Y
 var needNewPiece; // do we need to generate a new piece
 var curShape;
 
-function main() {
+function TestMain() {
+    console.info("Hello");
+}
+
+function TetrisMain() {
     initCanvas();
 
     //drawBoard();

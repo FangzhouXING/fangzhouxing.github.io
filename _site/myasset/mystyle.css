@@ -1,0 +1,17 @@
+.container {
+    width : 70%;
+    border:1px solid black;
+    
+}
+
+.left{
+    width: 300px;
+    height: 600px;
+    background: burlywood;
+    float: left;
+    position: fixed;
+}
+.right {
+    position: relative;
+    left: 350px;
+}
