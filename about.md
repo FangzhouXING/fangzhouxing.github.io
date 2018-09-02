@@ -1,7 +1,14 @@
 ---
 layout: page
-title: About Me
+title: Fangzhou
 permalink: /about/
 ---
 
-I have some experience in typing keyboard. Some of the stuff I type happen to be software. Some of them even work! At least I am better than apes, statistically.
+
+I have some experience in typing keyboard. <br>
+Some of the stuff I type happen to be software. <br>
+Some of them even work! <br>
+At least I am better than apes, statistically.
+
+[Linkedin](https://www.linkedin.com/in/fangzhouxing)
+
