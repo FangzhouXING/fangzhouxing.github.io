@@ -1,10 +1,8 @@
 ---
 layout: page
-title: Fangzhou
+title: About me
 permalink: /about/
 ---
-
-
 I have some experience in typing keyboard. <br>
 Some of the stuff I type happen to be software. <br>
 Some of them even work! <br>
