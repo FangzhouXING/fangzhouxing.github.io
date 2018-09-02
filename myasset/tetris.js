@@ -14,8 +14,6 @@ function TestMain() {
 
 function TetrisMain() {
     initCanvas();
-
-    //drawBoard();
     game();
 }
 
