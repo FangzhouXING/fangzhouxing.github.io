@@ -1,3 +1,8 @@
+// math.js testing
+var n = math.matrix([[4,3,2], [6,6,8], [7,4,5]]);   
+console.log(n);
+console.log(math.chain(3).add(4).multiply(2).done());
+
 const debug = false;
 
 var W = 400;
@@ -7,9 +12,58 @@ var Canvas = document.getElementById("RTScene");
 var Context = Canvas.getContext("2d");
 var CanvasImage = Context.getImageData(0, 0, W, H);
 
+var start = null;
+
+var counter = 0;
+var txt = document.getElementById('Testingtext');
+
+window.requestAnimationFrame(FPS_step);
+
+var spheres = null;
+
 startRender();
+UpdateWorld();
 Render();
 finishRender();
+
+//Graphical object
+class GObject {
+    constructor(Position, Speed) {
+        this.pos = Position;
+        this.speed = Speed;
+    }
+
+}
+
+class Sphere {
+
+}
+
+//UpdateWorld updates physics. 
+function UpdateWorld() {
+
+}
+
+function FPS_step(timestamp) {
+    if (!start) {
+        start = timestamp;
+        txt.innerHTML = "FPS: 0";
+    }
+    RenderFrame(timestamp);
+    counter++;
+    var progress = timestamp - start;
+    if(progress > 1000) {
+        txt.innerHTML = "FPS: " + counter;
+        start = timestamp;
+        counter = 0;
+    }
+    window.requestAnimationFrame(FPS_step);
+}
+
+function RenderFrame(timestamp)
+{
+
+}
 
 function startRender() {
     CanvasImage = Context.getImageData(0, 0, W, H);
