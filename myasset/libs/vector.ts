@@ -17,6 +17,16 @@ class Tuple {
         this.w = t2.w;
     }
 
+    At(i : number) : number {
+        switch (i) {
+            case 0: return this.x;
+            case 1: return this.y;
+            case 2: return this.z;
+            case 3: return this.w;
+            default: throw "Tuple access out of bound";
+        }
+    }
+
     isVector() : boolean {
         return false;
     }
