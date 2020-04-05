@@ -13,13 +13,12 @@ The score of a pair (i < j) of sightseeing spots is (A[i] + A[j] + i - j) : the 
 
 Return the maximum score of a pair of sightseeing spots.
 
-```
-Example 1:
-
+<b>Example 1:</b>
+{% highlight javascript %}
 Input: [8,1,5,2,6]
 Output: 11
 Explanation: i = 0, j = 2, A[i] + A[j] + i - j = 8 + 5 + 0 - 2 = 11
-```
+{% endhighlight %}
 ---
 
 In essense, one is required to find two max values with shortest distance.
