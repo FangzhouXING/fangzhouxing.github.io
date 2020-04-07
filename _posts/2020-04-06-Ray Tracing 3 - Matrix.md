@@ -1,5 +1,6 @@
 ---
 layout: post
+date: 2020-04-06 19:45:00
 ---
 
 I implemented inversion using [***Gaussian elimination***](https://en.wikipedia.org/wiki/Gaussian_elimination), which I think is much easier than the determinant method used in the book. 
@@ -33,4 +34,3 @@ It brings back my old memory in College where I first learned matrix operations.
 <script src="{{ base.url | prepend: site.url }}/myasset/libs/render.js"></script>
 <script src="{{ base.url | prepend: site.url }}/myasset/libs/matrix.js"></script>
 <script src="{{ base.url | prepend: site.url }}/myasset/rt3.js"></script>
-<script >
