@@ -9,7 +9,6 @@ layout: post
 <br>
 <button type="button" onclick="BeginButton()">Begin</button>
 <button type="button" onclick="PauseButton()">Pause</button>
-<button type="button" onclick="StopButton()">Stop</button>
 <canvas id="RTScene" width="640" height="480"></canvas>
 <p>Implemented some basic types and render infrastructure, preparing for future dev.</p>
 <p>Once stopped, refresh is required to render again. Not sure if this needs to change.</p>
