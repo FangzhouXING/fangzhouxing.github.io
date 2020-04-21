@@ -4,6 +4,7 @@ author:
 #  email: someemail@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
 
+url: https://fangzhouxing.github.io
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
