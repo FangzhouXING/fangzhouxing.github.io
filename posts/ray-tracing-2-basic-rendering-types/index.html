@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ray Tracing 2 - Basic Rendering & Types - Space</title>
+    <link rel="stylesheet" href="/assets/site.css">
+  </head>
+  <body>
+    <div class="site">
+      <header class="site-header">
+        <h1 class="site-title"><a href="/">Space</a></h1>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="/about/">About</a>
+        </nav>
+      </header>
+
+      <main class="post-shell">
+        <h2>Ray Tracing 2 - Basic rendering &amp; types</h2>
+        <p class="post-meta">March 19, 2020</p>
+
+        <p><a id="XSpeedText">X:50</a></p>
+        <input id="xspeed" type="range" min="1" max="100" value="50" oninput="xSlider()">
+
+        <p><a id="YSpeedText">Y:50</a></p>
+        <input id="yspeed" type="range" min="1" max="100" value="50" oninput="ySlider()">
+
+        <p>
+          <button type="button" onclick="BeginButton()">Begin</button>
+          <button type="button" onclick="PauseButton()">Pause</button>
+        </p>
+
+        <canvas id="RTScene" width="640" height="480"></canvas>
+
+        <p>Implemented some basic types and render infrastructure, preparing for future development.</p>
+        <p>Once stopped, refresh is required to render again.</p>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="/">Back to home</a></p>
+      </footer>
+    </div>
+
+    <script src="/myasset/math.js"></script>
+    <script src="/myasset/libs/vector.js"></script>
+    <script src="/myasset/libs/color.js"></script>
+    <script src="/myasset/libs/render.js"></script>
+    <script src="/myasset/rt2.js"></script>
+  </body>
+</html>

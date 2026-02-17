@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ray Tracing 3 - Matrix - Space</title>
+    <link rel="stylesheet" href="/assets/site.css">
+  </head>
+  <body>
+    <div class="site">
+      <header class="site-header">
+        <h1 class="site-title"><a href="/">Space</a></h1>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="/about/">About</a>
+        </nav>
+      </header>
+
+      <main class="post-shell">
+        <h2>Ray Tracing 3 - Matrix</h2>
+        <p class="post-meta">April 6, 2020</p>
+
+        <p>
+          I implemented inversion using
+          <a href="https://en.wikipedia.org/wiki/Gaussian_elimination">Gaussian elimination</a>,
+          which I think is easier than the determinant method used in the book.
+        </p>
+        <p>
+          It brings back my old memory in college where I first learned matrix operations.
+          Back then, most of us had no idea why linear algebra was necessary for computer science.
+        </p>
+
+        <h3>Input 4x4 Matrix</h3>
+        <textarea id="inputmatrix" rows="6" cols="50">8, -5, 9, 2,
+7, 5, 6, 1,
+-6, 0, 9, 6,
+-3, 0, -9, -4</textarea>
+        <p><button type="button" onclick="Compute()">Compute</button></p>
+
+        <h3>Transpose</h3>
+        <textarea id="transpose" rows="6" cols="50" readonly="true"></textarea>
+
+        <h3>Inverse</h3>
+        <textarea id="inversion" rows="6" cols="50" readonly="true"></textarea>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="/">Back to home</a></p>
+      </footer>
+    </div>
+
+    <script src="/myasset/math.js"></script>
+    <script src="/myasset/libs/vector.js"></script>
+    <script src="/myasset/libs/color.js"></script>
+    <script src="/myasset/libs/render.js"></script>
+    <script src="/myasset/libs/matrix.js"></script>
+    <script src="/myasset/rt3.js"></script>
+  </body>
+</html>

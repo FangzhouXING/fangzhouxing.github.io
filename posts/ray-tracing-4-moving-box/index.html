@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ray Tracing 4 - Moving Box - Space</title>
+    <link rel="stylesheet" href="/assets/site.css">
+  </head>
+  <body>
+    <div class="site">
+      <header class="site-header">
+        <h1 class="site-title"><a href="/">Space</a></h1>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="/about/">About</a>
+        </nav>
+      </header>
+
+      <main class="post-shell">
+        <h2>Ray Tracing 4 - Moving Box</h2>
+        <p class="post-meta">August 22, 2020</p>
+
+        <p>A moving box with Golang + WebAssembly.</p>
+        <p>
+          It runs at roughly 60 fps on Chrome. Writing code in Go is a better experience than JavaScript,
+          at the cost of performance in this setup.
+        </p>
+        <p>
+          Drawing in JavaScript is GPU accelerated, while this version does extra copies between JavaScript and Go
+          each frame. Still, it works.
+        </p>
+
+        <div id="AppCanvas"></div>
+      </main>
+
+      <footer class="site-footer">
+        <p><a href="/">Back to home</a></p>
+      </footer>
+    </div>
+
+    <script src="/myasset/RayTracing/01MovingBox/wasm_exec.js"></script>
+    <script>
+      const go = new Go();
+      const wasmUrl = "/myasset/RayTracing/01MovingBox/rt.wasm";
+
+      function runWasm(bytes) {
+        return WebAssembly.instantiate(bytes, go.importObject).then((result) => {
+          go.run(result.instance);
+        });
+      }
+
+      function startWasm() {
+        if (WebAssembly.instantiateStreaming) {
+          WebAssembly.instantiateStreaming(fetch(wasmUrl), go.importObject)
+            .then((result) => go.run(result.instance))
+            .catch(() => fetch(wasmUrl).then((res) => res.arrayBuffer()).then(runWasm));
+          return;
+        }
+
+        fetch(wasmUrl)
+          .then((res) => res.arrayBuffer())
+          .then(runWasm);
+      }
+
+      startWasm();
+    </script>
+  </body>
+</html>

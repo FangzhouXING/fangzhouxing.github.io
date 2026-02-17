@@ -1,5 +1,5 @@
 # fangzhouxing.github.io
 
-This is my personal website, using jekyll.
+Personal website served as plain static files.
 
-Welcome!
+No framework and no build step required.
