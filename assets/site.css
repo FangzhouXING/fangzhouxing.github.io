@@ -68,8 +68,7 @@ a:focus-visible {
 }
 
 .hero,
-.panel,
-.post-shell {
+.panel {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -132,16 +131,23 @@ a:focus-visible {
 }
 
 .post-shell {
-  padding: 24px;
+  max-width: 760px;
+  padding: 6px 0 0;
 }
 
 .post-shell h2 {
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  font-size: 1.9rem;
+  line-height: 1.25;
 }
 
 .post-shell .post-meta {
-  margin-bottom: 18px;
+  margin: 0 0 22px;
+}
+
+.post-shell p {
+  margin: 0 0 14px;
 }
 
 textarea {
@@ -194,10 +200,13 @@ button:focus-visible {
   }
 
   .hero,
-  .panel,
-  .post-shell {
+  .panel {
     border-radius: 12px;
     padding: 16px;
+  }
+
+  .post-shell h2 {
+    font-size: 1.6rem;
   }
 
   .site-title {
